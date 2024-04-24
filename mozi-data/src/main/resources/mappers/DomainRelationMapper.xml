@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="plus.mozi.data.mapper.DomainRelationMapper">
+    <resultMap id="result" type="plus.mozi.data.model.DomainRelationDO">
+        <result property="id" column="id" javaType="java.lang.Long" jdbcType="INTEGER"/>
+        <result property="sid" column="sid" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="tid" column="tid" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="relationType" column="relation_type" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="cols" >
+        `id`,
+        `sid`,
+        `tid`,
+        `relation_type`,
+        `created_at`,
+        `updated_at`
+    </sql>
+    <!--    <insert id="insert" parameterType="plus.mozi.data.model.DomainNodeDO" >-->
+    <!--        INSERT INTO domain_node(name,AGE,SEX)-->
+    <!--        VALUES ( #{NAME},#{AGE},#{SEX})-->
+    <!--    </insert>-->
+
+    <select id="findAll" resultMap="result">
+        SELECT <include refid="cols"/>
+        FROM domain_node
+    </select>
+</mapper>

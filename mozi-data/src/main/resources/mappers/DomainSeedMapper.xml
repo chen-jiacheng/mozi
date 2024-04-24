@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="plus.mozi.data.mapper.DomainNodeMapper">
-    <resultMap id="result" type="plus.mozi.data.model.DomainNodeDO">
+<mapper namespace="plus.mozi.data.mapper.DomainSeedMapper">
+    <resultMap id="result" type="plus.mozi.data.model.DomainSeedDO">
         <result property="id" column="id" javaType="java.lang.Long" jdbcType="INTEGER"/>
         <result property="domainName" column="domain_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
         <result property="domainDesc" column="domain_desc" javaType="java.lang.String" jdbcType="VARCHAR"/>
@@ -22,10 +22,10 @@
         `created_at`,
         `updated_at`
     </sql>
-<!--    <insert id="insert" parameterType="plus.mozi.data.model.DomainNodeDO" >-->
-<!--        INSERT INTO domain_node(name,AGE,SEX)-->
-<!--        VALUES ( #{NAME},#{AGE},#{SEX})-->
-<!--    </insert>-->
+    <!--    <insert id="insert" parameterType="plus.mozi.data.model.DomainNodeDO" >-->
+    <!--        INSERT INTO domain_node(name,AGE,SEX)-->
+    <!--        VALUES ( #{NAME},#{AGE},#{SEX})-->
+    <!--    </insert>-->
 
     <select id="findAll" resultMap="result">
         SELECT <include refid="cols"/>

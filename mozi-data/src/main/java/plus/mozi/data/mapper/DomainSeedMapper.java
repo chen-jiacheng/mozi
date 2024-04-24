@@ -10,7 +10,7 @@ import java.util.List;
  * @author chenjiacheng
  * @since 1.0.0
  */
-public interface DomainNodeMapper {
+public interface DomainSeedMapper {
 
     List<DomainNodeDO> findAll();
 

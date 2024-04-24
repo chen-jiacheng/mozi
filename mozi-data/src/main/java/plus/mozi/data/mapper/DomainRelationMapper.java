@@ -1,6 +1,7 @@
 package plus.mozi.data.mapper;
 
 import plus.mozi.data.model.DomainNodeDO;
+import plus.mozi.data.model.DomainRelationDO;
 
 import java.util.List;
 
@@ -10,8 +11,8 @@ import java.util.List;
  * @author chenjiacheng
  * @since 1.0.0
  */
-public interface DomainNodeMapper {
+public interface DomainRelationMapper {
 
-    List<DomainNodeDO> findAll();
+    List<DomainRelationDO> findAll();
 
 }
